@@ -18,16 +18,7 @@ The sandbox creates a dedicated root filesystem at:
 /tmp/sandbox_rootfs
 ```
 
-It uses `chroot()` to change the visible filesystem root and provides required system directories through **read-only bind mounts**, including:
-
-```text
-/bin
-/lib
-/lib64
-/usr
-```
-
-Read-only mounts help prevent sandboxed processes from modifying the underlying host filesystems.
+It uses `chroot()` to change the visible filesystem root and provides required system directories through **read-only bind mounts**
 
 ### Process & Namespace Isolation
 
